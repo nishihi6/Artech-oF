@@ -50,14 +50,14 @@ void ofApp::draw(){
 		ofFill();
 		ofSetColor(255, ofMap(deg, deg_start, deg_start + 90, 0, 135));
 
-		ofDrawSphere(radius * cos((deg + 120) * DEG_TO_RAD), 0, radius * sin((deg + 120) * DEG_TO_RAD), 8 * ((deg - deg_start) / 90.0));
+		ofDrawSphere(radius * cos((deg + 90) * DEG_TO_RAD), 0, radius * sin((deg + 90) * DEG_TO_RAD), 8 * ((deg - deg_start) / 90.0));
 	}
 	for (int deg = deg_start + 90; deg < deg_start + 180; deg++) {
 
 		ofFill();
 		ofSetColor(255, ofMap(deg, deg_start + 90, deg_start + 180, 135, 0));
 
-		ofDrawSphere(radius * cos((deg + 120) * DEG_TO_RAD), 0, radius * sin((deg + 120) * DEG_TO_RAD), 8 * (1 - (deg - (deg_start + 90)) / 90.0));
+		ofDrawSphere(radius * cos((deg + 90) * DEG_TO_RAD), 0, radius * sin((deg + 90) * DEG_TO_RAD), 8 * (1 - (deg - (deg_start + 90)) / 90.0));
 	}
 
 	ofRotateX(90);
